@@ -5,7 +5,7 @@ connection = pymysql.connect(host = host,
                             user = user,
                             password = password,
                             db = db)
-###############################
+
 def select():
     with connection.cursor() as cursor:
         cursor = connection.cursor()
@@ -24,7 +24,6 @@ def search():
         else:
             return rows
 
-#print(search())
 
 def insert(lastname,firstname,middlename,company,work_phone,cellular_phone,email):
     params = (lastname,firstname,middlename,company,work_phone,cellular_phone,email)
